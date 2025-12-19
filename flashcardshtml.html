@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry Flashcards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      margin: 0;
+      padding: 40px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .flashcards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .question {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #2c3e50;
+    }
+
+    .answer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      font-size: 0.95em;
+    }
+
+    .card:hover .answer {
+      transform: translateY(0%);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>10th Grade Geometry Review</h1>
+  <div class="flashcards">
+    <div class="card">
+      <div class="question">What is the sum of interior angles in a triangle?</div>
+      <div class="answer">180 degrees</div>
+    </div>
+    <div class="card">
+      <div class="question">Define a perpendicular bisector.</div>
+      <div class="answer">A line that divides a segment into two equal parts at 90°</div>
+    </div>
+    <div class="card">
+      <div class="question">What is the Pythagorean Theorem?</div>
+      <div class="answer">a² + b² = c² for right triangles</div>
+    </div>
+    <div class="card">
+      <div class="question">What is a tangent to a circle?</div>
+      <div class="answer">A line that touches the circle at exactly one point</div>
+    </div>
+    <div class="card">
+      <div class="question">What is the formula for the area of a triangle?</div>
+      <div class="answer">½ × base × height</div>
+    </div>
+    <div class="card">
+      <div class="question">What is a central angle?</div>
+      <div class="answer">An angle whose vertex is the center of a circle</div>
+    </div>
+    <div class="card">
+      <div class="question">What is a parallelogram?</div>
+      <div class="answer">A quadrilateral with opposite sides parallel and equal</div>
+    </div>
+    <div class="card">
+      <div class="question">What is the distance formula?</div>
+      <div class="answer">√[(x₂ - x₁)² + (y₂ - y₁)²]</div>
+    </div>
+  </div>
+</body>
+</html>
